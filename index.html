@@ -1,14 +1,41 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <div class="container">
+        <h1>나의 운세 알아보기</h1>
+        <img src="https://via.placeholder.com/150/FFD700/FFFFFF?text=Lucky+Bag" alt="Fortune Image" class="fortune-image">
+        <form id="fortuneForm">
+            <div class="input-group">
+                <label>성별:</label>
+                <div class="radio-group">
+                    <input type="radio" id="genderMale" name="gender" value="male" checked>
+                    <label for="genderMale">남</label>
+                    <input type="radio" id="genderFemale" name="gender" value="female">
+                    <label for="genderFemale">여</label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="birthdate">생년월일:</label>
+                <input type="date" id="birthdate" required>
+                <div class="radio-group">
+                    <input type="radio" id="calendarSolar" name="calendarType" value="solar" checked>
+                    <label for="calendarSolar">양력</label>
+                    <input type="radio" id="calendarLunar" name="calendarType" value="lunar">
+                    <label for="calendarLunar">음력</label>
+                </div>
+            </div>
+            <button type="submit">운세보기</button>
+        </form>
+        <div id="fortuneDisplaySection" class="fortune-display-section">
+            <fortune-display></fortune-display>
+        </div>
+    </div>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
