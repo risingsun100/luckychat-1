@@ -4,7 +4,7 @@
 This project aims to create a simple, API-less fortune-telling website inspired by "LuckyChat." Users will input their name and birthdate, and the website will generate a random fortune based on these inputs. The design will be modern, visually appealing, and responsive.
 
 ## Features
-- User input form (name, birthdate, **gender, lunar/solar preference**).
+- User input form (name/profile, birthdate, gender, lunar/solar preference).
 - Random fortune generation (client-side, no external APIs).
 - Dynamic display of fortunes.
 - Modern and responsive UI/UX.
@@ -18,7 +18,7 @@ This project aims to create a simple, API-less fortune-telling website inspired 
 ### 2. Design and Implement `index.html` (Completed)
 - Set up the basic HTML structure.
 - Include a title and a descriptive heading.
-- Create a form with input fields for name and birthdate.
+- Create a form with input fields for name/profile and birthdate.
 - Add a button to generate the fortune.
 - Create a dedicated section for displaying the generated fortune.
 - Link `style.css` and `main.js`.
@@ -36,20 +36,15 @@ This project aims to create a simple, API-less fortune-telling website inspired 
     - It will have its own encapsulated styles.
 - Add an event listener to the fortune generation button.
 - On button click:
-    - Capture user input (name, birthdate).
+    - Capture user input (name/profile, birthdate).
     - Generate a random fortune using a predefined list of fortunes.
     - Dynamically update the `<fortune-display>` Web Component with the user's name and the generated fortune.
     - Implement basic input validation.
 
-## Current Requested Change: Add Gender and Lunar/Solar Calendar Selection
+## Current Requested Change: Update Name Input to Name/Profile
 
 ### Plan and Steps:
-1.  **Update `blueprint.md`**: Add the new requirements to this document (Done).
+1.  **Update `blueprint.md`**: Update the requirements to reflect "이름이나 프로필" (Done).
 2.  **Modify `index.html`**:
-    *   Add radio buttons for gender selection (Male/Female).
-    *   Add radio buttons for birthdate type selection (Solar/Lunar).
-3.  **Modify `style.css`**:
-    *   Add styles for the new radio button groups to ensure they look good and are responsive.
-4.  **Modify `main.js`**:
-    *   Capture the selected gender and birthdate type from the form.
-    *   (Optional but good practice) Incorporate these new inputs into the fortune generation logic if needed in the future, even if currently only generating random fortunes.
+    *   Change the label from "👤 이름" to "👤 이름/프로필".
+    *   Change the placeholder from "이름을 입력하세요" to "이름이나 프로필을 입력하세요".
